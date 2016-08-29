@@ -194,7 +194,7 @@
 
 - Class: mult_question
   Output: Would you like to inform someone about your successful completion of 
-  this lesson via email?
+    this lesson via email?
   CorrectAnswer: NULL
   AnswerChoices: Yes; No
   AnswerTests: notify()
