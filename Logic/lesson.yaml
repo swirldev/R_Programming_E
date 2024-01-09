@@ -143,11 +143,11 @@
     statement as c(TRUE, TRUE, TRUE) & c(TRUE, FALSE, FALSE). 
 
 - Class: cmd_question
-  Output: "Now we'll type the same expression except we'll use the `&&` operator. Type the expression TRUE && c(TRUE, FALSE, FALSE)."
-  CorrectAnswer: "TRUE && c(TRUE, FALSE, FALSE)"
-  AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
+  Output: "Now we'll type the same expression except we'll use the `&&` operator. Type the expression TRUE && c(TRUE, FALSE, FALSE). In versions of R > 4.3.0, YOU WILL GET AN ERROR. Once you get the error, type ok() to continue to the next question."
+  CorrectAnswer: ok()
+  AnswerTests: omnitest(correctExpr="ok()")
   Hint: "As you'll see, the && version of AND works differently. Type: 
-    TRUE && c(TRUE, FALSE, FALSE)"
+    TRUE && c(TRUE, FALSE, FALSE), then type ok() to continue to the next question."
 
 - Class: text
   Output: "In this case, the left operand is only evaluated with the first member
