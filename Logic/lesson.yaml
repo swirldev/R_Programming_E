@@ -149,10 +149,12 @@
   Hint: "As you'll see, the && version of AND works differently. Type: 
     TRUE && c(TRUE, FALSE, FALSE), then type ok() to continue to the next question."
 
-- Class: text
-  Output: "In this case, the left operand is only evaluated with the first member
-    of the right operand (the vector). The rest of the elements in the vector
-    aren't evaluated at all in this expression."
+- Class: cmd_question
+  Output: "Now type the expression TRUE && TRUE"
+  CorrectAnswer: TRUE && TRUE
+  AnswerTests: omnitest(correctExpr="TRUE && TRUE")
+  Hint: "Now to see how the && operator works with a vector, type: 
+    TRUE && TRUE"
     
 - Class : text
   Output: The OR operator follows a similar set of rules. The `|` version of OR
