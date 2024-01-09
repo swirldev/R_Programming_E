@@ -143,16 +143,18 @@
     statement as c(TRUE, TRUE, TRUE) & c(TRUE, FALSE, FALSE). 
 
 - Class: cmd_question
-  Output: "Now we'll type the same expression except we'll use the `&&` operator. Type the expression TRUE && c(TRUE, FALSE, FALSE)."
-  CorrectAnswer: "TRUE && c(TRUE, FALSE, FALSE)"
-  AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
+  Output: "Now we'll type the same expression except we'll use the `&&` operator. Type the expression TRUE && c(TRUE, FALSE, FALSE). In versions of R > 4.3.0, YOU WILL GET AN ERROR. Once you get the error, type ok() to continue to the next question."
+  CorrectAnswer: ok()
+  AnswerTests: omnitest(correctExpr="ok()")
   Hint: "As you'll see, the && version of AND works differently. Type: 
-    TRUE && c(TRUE, FALSE, FALSE)"
+    TRUE && c(TRUE, FALSE, FALSE), then type ok() to continue to the next question."
 
-- Class: text
-  Output: "In this case, the left operand is only evaluated with the first member
-    of the right operand (the vector). The rest of the elements in the vector
-    aren't evaluated at all in this expression."
+- Class: cmd_question
+  Output: "Now type the expression TRUE && TRUE"
+  CorrectAnswer: TRUE && TRUE
+  AnswerTests: omnitest(correctExpr="TRUE && TRUE")
+  Hint: "Now to see how the && operator works with a vector, type: 
+    TRUE && TRUE"
     
 - Class : text
   Output: The OR operator follows a similar set of rules. The `|` version of OR
